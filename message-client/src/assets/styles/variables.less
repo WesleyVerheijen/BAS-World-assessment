@@ -1,0 +1,30 @@
+@primary-color: #ff5733;
+@primary-color-light: #ff9433;
+@background-color: #171c24;
+@background-color-dark: #252c35;
+@text-color: #212529;
+@text-color-dark: #fff;
+@border-color: #ced4da;
+@border-color-dark: #343a40;
+@animated-background-color: #770979;
+@animated-background-color00: #171c24;
+
+@accent-color: #2ee7f3;
+@accent-color-contrast: #1d242f;
+
+@input-background-color: #343f4e;
+@input-background-color: #d04f33;
+@input-text-color: #fff;
+
+@margin: 1.2rem;
+@margin-half: .6rem;
+
+@left-min: 3rem;
+@left-max: 13rem;
+
+.background-accent() {
+  background-color: @primary-color;
+  background: linear-gradient(45deg, @primary-color, @primary-color-light);
+  color: @text-color-dark;
+  text-shadow: .1em .1em .3em @background-color;
+}

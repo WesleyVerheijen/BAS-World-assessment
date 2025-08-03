@@ -1,0 +1,56 @@
+@import "./variables.less";
+
+.order-edit {
+  .order-product-details {
+    display: grid;
+    grid-template-areas: 'image product actions' 'image options actions';
+    grid-template-columns: 4rem 1fr 6rem;
+    border: 1px solid @primary-color;
+    margin: @margin-half;
+    border-radius: @margin;
+
+    & > .image {
+      grid-area: image;
+
+      img {
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: auto auto;
+        display: block;
+      }
+    }
+
+    & > .row {
+      grid-area: product;
+    }
+
+    & > .options {
+      grid-area: options;
+    }
+
+    & > .actions {
+      grid-area: actions;
+      padding: @margin-half;
+
+      button {
+        padding: @margin-half;
+      }
+    }
+  }
+
+  .row.total {
+    border-bottom: 1px solid @primary-color;
+    margin: @margin;
+
+    span:last-child {
+      font-family: monospace;
+      text-align: right;
+      float: right;
+    }
+  }
+
+  a {
+    .background-accent;
+    text-decoration: none;
+  }
+}

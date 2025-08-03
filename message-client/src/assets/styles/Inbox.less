@@ -1,0 +1,27 @@
+@import "./variables.less";
+
+.inbox {
+    header {
+        padding: .2em;
+    }
+    aside a {
+        display: block;
+        text-decoration: none;
+        background-color: @background-color-dark;
+        margin: .2em;
+        padding: @margin-half;
+        color: @text-color-dark;
+
+        .badge {
+            border-radius: 1em;
+            background-color: @primary-color;
+            color: @text-color-dark;
+            width: 1em;
+            height: 1em;
+            line-height: 1em;
+            position: absolute;
+            text-align: center;
+            font-size: .7em;
+        }
+    }
+}

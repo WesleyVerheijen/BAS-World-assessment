@@ -1,0 +1,104 @@
+@import "./variables.less";
+
+.product-configuration {
+  padding-bottom: 20vh;
+  
+  div.product {
+    .background-accent();
+    position: relative;
+    display: inline-block;
+    width: 50vw;
+    border-radius: 1.2rem;
+    margin: @margin 0 0 @margin;
+    width: calc(100vw - @margin * 2);
+    height: calc((100vw - @margin * 2) * .6);
+
+    label {
+      position: absolute;
+      left: 1.2rem;
+      top: .6rem;
+      display: block;
+      line-height: 1em;
+      font-size: 2em;
+      text-shadow: .1em .1em .3em @background-color;
+      z-index: 2;
+    }
+    span {
+      position: absolute;
+      left: 1.2rem;
+      top: 3rem;
+      line-height: 1em;
+      font-size: 1.2em;
+      z-index: 2;
+    }
+    img {
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+      max-width: 100%;
+      max-height: 100%;
+      z-index: 1;
+    }
+  }
+
+  .option-menu {
+    padding: 0 @margin calc(@margin / 2) @margin;
+
+    label {
+      display: block;
+      border-bottom: 1px solid @primary-color;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: calc(@margin * .6);
+      padding-top: calc(@margin * .6);
+
+      button.option {
+        border: 1px solid @primary-color;
+        background: none;
+        color: @accent-color-contrast;
+        text-shadow: none;
+        border-radius: .6rem;
+        min-height: 3.2rem;
+        padding-left: calc(@margin * .6);
+        margin: 0;
+
+        &.active {
+          .background-accent();
+          border: none;
+        }
+
+        span{
+          display: block;
+          text-align: left;
+          &.amount {
+            font-size: .8em;
+          }
+        }
+      }
+    }
+  }
+
+  .order-product-details {
+    border: 1px solid @primary-color;
+    margin: @margin;
+    padding: @margin;
+    border-radius: @margin;
+  }
+
+  & > button {
+    display: inline-block;
+    width: calc(40% - @margin-half / 2);
+
+    &:last-of-type {
+      margin-right: 10%;
+      float: right;
+    }
+
+    &:first-of-type {
+      margin-left: 10%;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import './assets/styles/variables.less';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12pt;
+  scrollbar-color: @primary-color #00000000;
+  scrollbar-width: thin;
+}
+
+#app {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 'header' 'content' 'footer';
+  grid-template-rows: 4.6rem auto 2rem;
+  height: 100dvh;
+  .play-background();
+
+  & > header {
+    grid-area: header;
+    background-color: @background-color-dark;
+    color: @text-color-dark;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    height: 4.6rem;
+    position: relative;
+
+    img {
+      height: 3rem;
+      margin: .6rem auto;
+      display: block;
+    }
+
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+
+      button {
+        color: @primary-color-light;
+        background: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1.6rem;
+        height: 100%;
+        overflow: hidden;
+
+        span {
+          display: block;
+          font-size: .8rem;
+          line-height: 1.2rem;
+          overflow: hidden;
+          text-overflow: clip;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  main {
+    grid-area: content;
+    max-height: calc(100vh - 6.6rem);
+    position: relative;
+    overflow-y: scroll;
+
+    & > footer {
+      // padding: @margin;
+
+      button {
+        display: block;
+        margin: @margin-half auto;
+        width: 80%;
+      }
+      
+    }
+  }
+
+  & > footer {
+    grid-area: footer;
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    background-color: @background-color-dark;
+    color: @text-color-dark;
+    font-size: .66em;
+    line-height: 2rem;
+    height: 2rem;
+    overflow: hidden;
+  }
+}
+
+.card {
+  padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+.play-background() {
+  background: #252c35;
+  background: radial-gradient(#ee7752, #eebd52, #fff, #fff);
+	background-size: 400% 400%;
+	animation: gradient 15s infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% -30%;
+	}
+	50% {
+		background-position: 100% -30%;
+	}
+	100% {
+		background-position: 0% -30%;
+	}
+}

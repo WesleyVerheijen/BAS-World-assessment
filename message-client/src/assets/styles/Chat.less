@@ -1,0 +1,31 @@
+@import "./variables.less";
+
+.chat {
+    .log {
+        .received, .sent {
+            .background-accent();
+            border-radius: @margin;
+            margin: @margin;
+            padding: @margin;
+            display: grid;
+            grid-template-areas: 'message message message' 'sent-as expiration time';
+
+            .cipher {
+                display: none;
+            }
+
+            .message { grid-area: message; padding-bottom: @margin-half; }
+            .sent-as { grid-area: sent-as; }
+            .expiration { grid-area: expiration; }
+            .date { grid-area: time; text-align: right; }
+        }
+
+        .sent {
+            margin-left: calc(@margin * 4);
+        }
+        
+        .received {
+            margin-right: calc(@margin * 4);
+        }
+    }
+}
