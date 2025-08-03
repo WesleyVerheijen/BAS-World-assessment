@@ -1,1 +1,0 @@
-# BAS-World-assessment
