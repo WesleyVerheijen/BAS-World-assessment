@@ -12,7 +12,7 @@ Run the following command to clone the repository:
 
 Run the following to install dependancies:
 
-`cd message-client && npm intall && cd ../`
+`cd message-client && npm install && cd ../secret-message-backend && npm install && composer install && cd ../ && `
 
 ## Run the Docker container and frontend
 
